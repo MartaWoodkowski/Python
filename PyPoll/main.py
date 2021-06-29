@@ -8,7 +8,7 @@ Candidate_List = []
 Votes_Per_Candidate = []
 Percentage_Vote_Per_Candidate = []
 
-#Extracting a list of unique names from the 'Candidate' column
+#Function to extract a list of unique names from the 'Candidate' column
 def Unique_Candidate_List(names):
 
     Unique_Candidate_List = []
@@ -27,25 +27,28 @@ with open(election_data_path) as csvfile:
     csv_header = next(csv_reader, None)
     
     for row in csv_reader:
-        Total_Votes += 1
-        Candidate_List.append(row[2])
+        Total_Votes += 1   #Total number of votes cast
+        Candidate_List.append(row[2])   #List of candidate-per-vote row by row
        
-    Candidates = Unique_Candidate_List(Candidate_List)
+    Candidates = Unique_Candidate_List(Candidate_List)   #used function above to get unique candidate list
     
+    #Vote count per candidate
     for i in range(len(Candidates)):
         count = 0
         for j in range(len(Candidate_List)):
             if Candidates[i] == Candidate_List[j]:
                 count += 1
          
-        Votes_Per_Candidate.append(count)
+        Votes_Per_Candidate.append(count)   #store votes count per candidate
 
+    #Calculating percentage of votes counted per candidate (based on the number of votes each candidate received)
     for x in range(len(Votes_Per_Candidate)):
         Percentage_Vote_Per_Candidate.append(Votes_Per_Candidate[x]/Total_Votes*100)
     
+    #Identifying the candidate who received majority of votes
     Majority_Of_Votes = max (Votes_Per_Candidate)
-    for z in range(len(Votes_Per_Candidate)):
-        if Majority_Of_Votes == Votes_Per_Candidate[z]:
+    for z in range(len(Votes_Per_Candidate)):   #once found the Max amount of votes, I match this number to the right candidate name
+        if Majority_Of_Votes == Votes_Per_Candidate[z]:   
             Winner = Candidates[z]
     
     

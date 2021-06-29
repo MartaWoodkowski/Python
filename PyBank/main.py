@@ -15,24 +15,27 @@ with open(budget_data_path) as csvfile:
     csv_header = next(csv_reader, None)
     
     for row in csv_reader:
-        Total_Months += 1
-        Total_Amount += int(row[1])
-        Profit_Loss_Data.append(int(row[1]))
-        Date_Recorded.append(row[0])
+        Total_Months += 1   #Total Months
+        Total_Amount += int(row[1])   #Total of profit/loss
+        Profit_Loss_Data.append(int(row[1]))   #add entry amounts from 'Profit/Loss' column to the Profit_Loss_Data list
+        Date_Recorded.append(row[0])   #add entry dates from 'Date' column to the Date_Recorded list
          
-    for i in range(len(Profit_Loss_Data)-1):
-        Profit_Loss_Change.append(Profit_Loss_Data[i+1]-Profit_Loss_Data[i])
+    #Average Change calculation
+    for i in range(len(Profit_Loss_Data)-1):   #reason of 'len()-1' because the length of Average_Change list is one number shorter than Profit_Loss_Data list
+        Profit_Loss_Change.append(Profit_Loss_Data[i+1]-Profit_Loss_Data[i])   #get profit/loss from the row-ahead and subtract the profit/loss from the current-row to get the profit/loss change
     Average_Change = sum(Profit_Loss_Change)/len(Profit_Loss_Change)
   
+    #Greatest Increase calculation
     Greatest_Increase = max(Profit_Loss_Change)
     for i in range(len(Profit_Loss_Change)):
         if Greatest_Increase == Profit_Loss_Change [i]:
-            Greatest_Increase_Date = Date_Recorded[i+1]
+            Greatest_Increase_Date = Date_Recorded[i+1]   #[i+1] to match the correct date (when I calculated average changes my list was shifted by one index)
     
+    #Greatest Decrease Calculation
     Greatest_Decrease = min(Profit_Loss_Change)
     for i in range(len(Profit_Loss_Change)):
         if Greatest_Decrease == Profit_Loss_Change [i]:
-            Greatest_Decrease_Date = Date_Recorded[i+1]
+            Greatest_Decrease_Date = Date_Recorded[i+1]   #[i+1] to match the correct date (when I calculated average changes my list was shifted by one index)
     
     
     #Creating and Writing my budget_data_results.txt file in the analysis folder:
