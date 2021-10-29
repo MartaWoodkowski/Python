@@ -2,9 +2,9 @@
 
 ## PyBank
 
-* Creating a Python script for analyzing the financial records of "x" company.
+* Created a Python script for analyzing the financial records of "x" company.
 
-* With the given dataset, the task is to create a Python script that analyzes the records to calculate each of the following:
+* With the given dataset, the task was to create a Python script that analyzes the records to calculate each of the following:
 
   * The total number of months included in the dataset
 
@@ -16,7 +16,7 @@
 
   * The greatest decrease in losses (date and amount) over the entire period
 
-* As an example, your analysis should look similar to the one below:
+* Should look similar to this:
 
   ```text
   Financial Analysis
@@ -28,14 +28,14 @@
   Greatest Decrease in Profits: Sep-2013 ($-2196167)
   ```
 
-* In addition, it's best that final script should both print the analysis to the terminal and export a text file with the results.
+* The final script prints both the analysis to the terminal and exports a text file with the results.
 
 
 ## PyPoll
 
-* Tasked with helping a small, rural town modernize its vote counting process.
+* Got tasked with helping a small, rural town modernize its vote counting process.
 
-* With the given dataset, the task is to create a Python script that analyzes the votes and calculates each of the following:
+* With the given dataset, the task was to create a Python script that analyzes the votes and calculates each of the following:
 
   * The total number of votes cast
 
@@ -47,7 +47,7 @@
 
   * The winner of the election based on popular vote.
 
-* As an example, your analysis should look similar to the one below:
+* Should look similar to this:
 
   ```text
   Election Results
@@ -63,7 +63,7 @@
   -------------------------
   ```
 
-* In addition, it's best that final script should both print the analysis to the terminal and export a text file with the results.
+* The final script prints both the analysis to the terminal and exports a text file with the results.
 
 
 
