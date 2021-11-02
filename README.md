@@ -2,9 +2,9 @@
 
 ## PyBank
 
-* Created a Python script for analyzing the financial records of "x" company.
+* Created a Python script to analyze financial records of the company.
 
-* With the given dataset, the task was to create a Python script that analyzes the records to calculate each of the following:
+* Analysis includes the following:
 
   * The total number of months included in the dataset
 
@@ -16,7 +16,7 @@
 
   * The greatest decrease in losses (date and amount) over the entire period
 
-* Should look similar to this:
+* This is how the output looks like:
 
   ```text
   Financial Analysis
@@ -33,9 +33,9 @@
 
 ## PyPoll
 
-* Got tasked with helping a small, rural town modernize its vote counting process.
+* Got tasked with helping a small town modernize its vote counting process.
 
-* With the given dataset, the task was to create a Python script that analyzes the votes and calculates each of the following:
+* Created a Python script to analyze votes and calculate each of the following:
 
   * The total number of votes cast
 
@@ -47,7 +47,7 @@
 
   * The winner of the election based on popular vote.
 
-* Should look similar to this:
+* This is how the output looks like:
 
   ```text
   Election Results
@@ -56,8 +56,8 @@
   -------------------------
   Khan: 63.000% (2218231)
   Correy: 20.000% (704200)
-  Li: 14.000% (492940)
   O'Tooley: 3.000% (105630)
+  Li: 14.000% (492940)
   -------------------------
   Winner: Khan
   -------------------------
